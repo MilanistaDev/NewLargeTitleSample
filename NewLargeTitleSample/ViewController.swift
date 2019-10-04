@@ -17,6 +17,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.setUpNavigationBar()
+    }
+
+    private func setUpNavigationBar() {
+        // Large Title Basic Settings
+        self.navigationItem.title = "Large Title"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.largeTitleDisplayMode = .always
     }
 }
 
