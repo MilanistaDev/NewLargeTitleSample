@@ -25,6 +25,18 @@ class ViewController: UIViewController {
         self.navigationItem.title = "Large Title"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .always
+
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithDefaultBackground()
+            appearance.backgroundColor = .red
+            appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.label]
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.label]
+            self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+            self.navigationController?.navigationBar.standardAppearance = appearance
+        } else {
+            self.navigationController?.navigationBar.barTintColor = .red
+        }
     }
 }
 
