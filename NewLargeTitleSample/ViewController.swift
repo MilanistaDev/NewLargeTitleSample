@@ -32,6 +32,7 @@ class ViewController: UIViewController {
             appearance.backgroundColor = .red
             appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.label]
             appearance.titleTextAttributes = [.foregroundColor: UIColor.label]
+            //appearance.titlePositionAdjustment = UIOffset(horizontal: -UIScreen.main.bounds.width / 2 + 64 , vertical: 0.0)
             self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
             self.navigationController?.navigationBar.standardAppearance = appearance
         } else {
